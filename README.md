@@ -1,56 +1,61 @@
-# Welcome to your Expo app 👋
+# Configuración técnica
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicación con Expo SDK 57, React Native 0.86.3, TypeScript 6 y Expo Router.
 
-## Get started
+## Requisitos
 
-1. Install dependencies
+- Node.js 22.13 o superior.
+- npm. El proyecto utiliza `package-lock.json` para fijar las dependencias.
 
-   ```bash
-   npm install
-   ```
+## Preparar e iniciar el proyecto
 
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+Instala las dependencias desde la raíz del proyecto:
 
 ```bash
-npm run reset-project
+npm ci
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Inicia el servidor de desarrollo:
 
-### Other setup steps
+```bash
+npm run start
+```
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+Expo genera automáticamente `expo-env.d.ts` y los tipos de rutas en
+`.expo/types/router.d.ts`. Estos archivos están ignorados por Git y no deben
+editarse manualmente. `tsconfig.json` ya los incluye.
 
-## Learn more
+En una copia nueva del proyecto, espera a que Metro esté listo antes de ejecutar
+las comprobaciones. Puedes detener el servidor con `Ctrl+C` o ejecutar los
+comandos en otra terminal.
 
-To learn more about developing your project with Expo, look at the following resources:
+También están disponibles `npm run android`, `npm run ios` y `npm run web` para
+iniciar Expo y abrir la plataforma correspondiente. El simulador de iOS requiere
+macOS.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Comprobaciones
 
-## Join the community
+```bash
+npm run typecheck
+npm run lint
+```
 
-Join our community of developers creating universal apps.
+`typecheck` ejecuta `tsc --noEmit`. `lint` ejecuta `expo lint` con la configuración
+plana de `eslint-config-expo` definida en `eslint.config.js`.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Navegación y dependencias
+
+El punto de entrada es `expo-router/entry`. Las rutas se encuentran en `src/app/`
+y los archivos `_layout.tsx` configuran la navegación. Los componentes, hooks y
+utilidades se mantienen fuera de ese directorio.
+
+Para añadir una dependencia, utiliza Expo CLI para resolver una versión
+compatible con el SDK:
+
+```bash
+npx expo install <paquete>
+```
+
+Consulta la [documentación de Expo SDK 57](https://docs.expo.dev/versions/v57.0.0/),
+la [generación de tipos de rutas](https://docs.expo.dev/router/reference/typed-routes/)
+y la [configuración de ESLint](https://docs.expo.dev/guides/using-eslint/).
