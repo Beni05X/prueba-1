@@ -1,5 +1,5 @@
-import { Colors } from '@/constants/theme';
+import { useThemePreferences } from '@/theme/theme-preference-provider';
 
 export function useTheme() {
-  return Colors;
+  return useThemePreferences().colors;
 }

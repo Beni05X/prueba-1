@@ -1,0 +1,1 @@
+export type Compra = Readonly<{ id: string; estado: string; fecha: string; subtotal: string; envio: string; total: string; metodoPago: string | null; detalles: readonly { id: string; nombre: string; variante: string | null; cantidad: number; subtotal: string }[] }>;

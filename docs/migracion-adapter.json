@@ -1,0 +1,850 @@
+{
+  "formatVersion": 1,
+  "capturedBeforeMigrationUtc": "2026-10-07T19:25:49.7338735Z",
+  "gitSnapshot": {
+    "branch": "feature/estructura-app",
+    "head": "ec969b3e31c159b128ff055c54b76cb101a7be4b",
+    "porcelain": [
+      " M .gitignore",
+      " M README.md",
+      " M src/app/+not-found.tsx",
+      " M src/app/_layout.tsx",
+      " M src/app/agenda.tsx",
+      " M src/app/autenticacion.tsx",
+      " M src/app/catalogo.tsx",
+      " M src/app/cursos.tsx",
+      " M src/app/index.tsx",
+      " M src/app/perfil.tsx",
+      " M src/app/servicios.tsx",
+      " M src/components/themed-text.tsx",
+      " M src/components/themed-view.tsx",
+      " M src/components/ui/screen.tsx",
+      " M src/constants/navigation.ts",
+      " M src/constants/theme.ts",
+      "?? .env.example",
+      "?? src/app/carrito.tsx",
+      "?? src/app/configuracion.tsx",
+      "?? src/app/cuenta/[seccion].tsx",
+      "?? src/components/navigation/bottom-navigation.tsx",
+      "?? src/components/ui/account-section-styles.ts",
+      "?? src/components/ui/icon.tsx",
+      "?? src/components/ui/style-guide.tsx",
+      "?? src/components/ui/touchable.tsx",
+      "?? src/config/api.ts",
+      "?? src/features/agenda/models/agenda-preview.ts",
+      "?? src/features/agenda/models/cita.ts",
+      "?? src/features/agenda/viewmodels/use-agenda-view-model.ts",
+      "?? src/features/agenda/views/agenda-view.tsx",
+      "?? src/features/autenticacion/models/autenticacion.ts",
+      "?? src/features/autenticacion/viewmodels/use-autenticacion-view-model.ts",
+      "?? src/features/autenticacion/views/autenticacion-seccion-view.tsx",
+      "?? src/features/autenticacion/views/autenticacion-view.tsx",
+      "?? src/features/catalogo/models/catalogo-preview.ts",
+      "?? src/features/catalogo/models/catalogo.ts",
+      "?? src/features/catalogo/viewmodels/use-catalogo-view-model.ts",
+      "?? src/features/catalogo/views/catalogo-view.tsx",
+      "?? src/features/configuracion/models/configuracion.ts",
+      "?? src/features/configuracion/viewmodels/use-configuracion-view-model.ts",
+      "?? src/features/configuracion/views/configuracion-seccion-view.tsx",
+      "?? src/features/configuracion/views/configuracion-view.tsx",
+      "?? src/features/cuenta/models/cuenta.ts",
+      "?? src/features/cuenta/viewmodels/use-cuenta-view-model.ts",
+      "?? src/features/cuenta/views/cuenta-view.tsx",
+      "?? src/features/cursos/models/curso.ts",
+      "?? src/features/cursos/models/cursos-preview.ts",
+      "?? src/features/cursos/models/mis-cursos.ts",
+      "?? src/features/cursos/viewmodels/use-cursos-view-model.ts",
+      "?? src/features/cursos/viewmodels/use-mis-cursos-view-model.ts",
+      "?? src/features/cursos/views/cursos-view.tsx",
+      "?? src/features/cursos/views/mis-cursos-view.tsx",
+      "?? src/features/favoritos/models/favorito.ts",
+      "?? src/features/favoritos/viewmodels/use-favoritos-view-model.ts",
+      "?? src/features/favoritos/views/favoritos-view.tsx",
+      "?? src/features/informacion/models/informacion.ts",
+      "?? src/features/informacion/viewmodels/use-informacion-view-model.ts",
+      "?? src/features/informacion/viewmodels/use-no-encontrado-view-model.ts",
+      "?? src/features/informacion/views/informacion-view.tsx",
+      "?? src/features/informacion/views/no-encontrado-view.tsx",
+      "?? src/features/inicio/models/inicio.ts",
+      "?? src/features/inicio/viewmodels/use-inicio-view-model.ts",
+      "?? src/features/inicio/views/inicio-view.tsx",
+      "?? src/features/notificaciones/models/notificacion.ts",
+      "?? src/features/notificaciones/viewmodels/use-notificaciones-view-model.ts",
+      "?? src/features/notificaciones/views/notificaciones-view.tsx",
+      "?? src/features/perfil/models/perfil.ts",
+      "?? src/features/perfil/viewmodels/use-editar-perfil-view-model.ts",
+      "?? src/features/perfil/viewmodels/use-perfil-view-model.ts",
+      "?? src/features/perfil/views/editar-perfil-view.tsx",
+      "?? src/features/perfil/views/perfil-view.tsx",
+      "?? src/features/productos/models/producto.ts",
+      "?? src/features/productos/models/productos-preview.ts",
+      "?? src/features/productos/viewmodels/use-productos-view-model.ts",
+      "?? src/features/productos/views/productos-list-view.tsx",
+      "?? src/features/servicios/models/servicio.ts",
+      "?? src/features/servicios/models/servicios-preview.ts",
+      "?? src/features/servicios/viewmodels/use-servicios-view-model.ts",
+      "?? src/features/servicios/views/servicios-view.tsx",
+      "?? src/features/ventas/models/venta.ts",
+      "?? src/features/ventas/viewmodels/use-carrito-view-model.ts",
+      "?? src/features/ventas/viewmodels/use-compras-view-model.ts",
+      "?? src/features/ventas/views/carrito-view.tsx",
+      "?? src/features/ventas/views/compras-view.tsx",
+      "?? src/shared/models/view-state.ts",
+      "?? src/utils/format-price.ts"
+    ]
+  },
+  "modules": [
+    "agenda",
+    "autenticacion",
+    "catalogo",
+    "configuracion",
+    "cuenta",
+    "cursos",
+    "favoritos",
+    "informacion",
+    "inicio",
+    "notificaciones",
+    "perfil",
+    "productos",
+    "servicios",
+    "ventas"
+  ],
+  "migratedFileCount": 58,
+  "files": [
+    {
+      "module": "agenda",
+      "source": "src/features/agenda/models/agenda-preview.ts",
+      "destination": "src/modules/agenda/models/agenda-preview.ts",
+      "originalSha256": "ffe03d5f56692a5ff113ab0b7cb6ec8bb527a382065244577d2dd8e1aaf83201",
+      "originalBytes": 507,
+      "migratedSha256": "ffe03d5f56692a5ff113ab0b7cb6ec8bb527a382065244577d2dd8e1aaf83201",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "agenda",
+      "source": "src/features/agenda/models/cita.ts",
+      "destination": "src/modules/agenda/models/cita.ts",
+      "originalSha256": "1fa0cd759fa3d61ad15049bd2284d89e7d32385633c5ed543c5f26b6f6b7e987",
+      "originalBytes": 542,
+      "migratedSha256": "1fa0cd759fa3d61ad15049bd2284d89e7d32385633c5ed543c5f26b6f6b7e987",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "agenda",
+      "source": "src/features/agenda/viewmodels/use-agenda-view-model.ts",
+      "destination": "src/modules/agenda/viewmodels/use-agenda-view-model.ts",
+      "originalSha256": "7bb5fd6a944a7951c325b59f8b381bcba7af11b41565967913e1e7d779166fe7",
+      "originalBytes": 1637,
+      "migratedSha256": "abe6c7c5d3d303d4a79d8b49260fc1984d9f8d24881898c98a96a2f82be123f2",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "agenda",
+      "source": "src/features/agenda/views/agenda-view.tsx",
+      "destination": "src/modules/agenda/views/agenda-view.tsx",
+      "originalSha256": "80247abf543bb1ca9424f85cd59bb8294d2eeb13154c74b3a7361eeabe751865",
+      "originalBytes": 2413,
+      "migratedSha256": "ed55b38676ea128680eb00278a7d6360b0a71051c9fe3a0ab0d6e1b476b88db7",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "autenticacion",
+      "source": "src/features/autenticacion/models/autenticacion.ts",
+      "destination": "src/modules/autenticacion/models/autenticacion.ts",
+      "originalSha256": "5536c0590ed3f345966af9c31886d8bd0e9e5194faa156c6ce50b3dcff57c13d",
+      "originalBytes": 713,
+      "migratedSha256": "5536c0590ed3f345966af9c31886d8bd0e9e5194faa156c6ce50b3dcff57c13d",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "autenticacion",
+      "source": "src/features/autenticacion/viewmodels/use-autenticacion-view-model.ts",
+      "destination": "src/modules/autenticacion/viewmodels/use-autenticacion-view-model.ts",
+      "originalSha256": "7596d295218b5aded6b7509a9e828bb1d19008dc1602df706a4bef92f7dcfa96",
+      "originalBytes": 1955,
+      "migratedSha256": "4207ccd08e84ef1d07c3f6ee4bf6037d749887ded4bdf3a5bf780d5c8f82daa0",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "autenticacion",
+      "source": "src/features/autenticacion/views/autenticacion-seccion-view.tsx",
+      "destination": "src/modules/autenticacion/views/autenticacion-seccion-view.tsx",
+      "originalSha256": "6a5ab7eac343779e14e4fc40f81a16c656501f09037d170e186c3e86476296be",
+      "originalBytes": 4975,
+      "migratedSha256": "802f197ea793fc7a0e1ea0c242f44f8e00d4cd7c1bf56727a7fd65a1a9de6695",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "autenticacion",
+      "source": "src/features/autenticacion/views/autenticacion-view.tsx",
+      "destination": "src/modules/autenticacion/views/autenticacion-view.tsx",
+      "originalSha256": "08e8ab4e3e39e87c30fcc38f0acc8bf42aaa6ce7de536a5d80b004bc05292532",
+      "originalBytes": 2982,
+      "migratedSha256": "8673ec4401d8b121c61b112570fb3bab76ddf94ddd8874a320f4fb2596ca8ffe",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "catalogo",
+      "source": "src/features/catalogo/models/catalogo-preview.ts",
+      "destination": "src/modules/catalogo/models/catalogo-preview.ts",
+      "originalSha256": "9fd00744a1fecdfa81f4d1950477bdfc3f2d5b975860eb0e05b5c0f603781a9c",
+      "originalBytes": 442,
+      "migratedSha256": "509b696647713465985f742e84b64dacdd2706ce7a6990068a4d54bb27922d1f",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "catalogo",
+      "source": "src/features/catalogo/models/catalogo.ts",
+      "destination": "src/modules/catalogo/models/catalogo.ts",
+      "originalSha256": "20e4f4ff24f1043a9059da3b699a4f8b30eef99d0d183c606c4b1630a5d19f53",
+      "originalBytes": 901,
+      "migratedSha256": "8bd69dc1649a8a389d7e58db92bdb7251639a32da565d2406a1de8c114f9d0b5",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "catalogo",
+      "source": "src/features/catalogo/viewmodels/use-catalogo-view-model.ts",
+      "destination": "src/modules/catalogo/viewmodels/use-catalogo-view-model.ts",
+      "originalSha256": "965cd718fcb96cb5284b5a09edbe2148afd284501d03ce0fae019c992124bd83",
+      "originalBytes": 2605,
+      "migratedSha256": "9c5920188dcb85220a9f4998b41599aa382af5b433b39d79a33c365e86a8344b",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "catalogo",
+      "source": "src/features/catalogo/views/catalogo-view.tsx",
+      "destination": "src/modules/catalogo/views/catalogo-view.tsx",
+      "originalSha256": "a3a275fe6dc8ed86cbfbc8016ac008e678909d1cd713397ae772351d20d85153",
+      "originalBytes": 1596,
+      "migratedSha256": "6138efba18458dd0a82e71b9cdace844b34e0161b102b55524c397083cc9000a",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "configuracion",
+      "source": "src/features/configuracion/models/configuracion.ts",
+      "destination": "src/modules/configuracion/models/configuracion.ts",
+      "originalSha256": "9205be4b65f386b8f301d8003ddec610ab1b8b40bc488030c335b28a95293ed9",
+      "originalBytes": 1641,
+      "migratedSha256": "9205be4b65f386b8f301d8003ddec610ab1b8b40bc488030c335b28a95293ed9",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "configuracion",
+      "source": "src/features/configuracion/viewmodels/use-configuracion-view-model.ts",
+      "destination": "src/modules/configuracion/viewmodels/use-configuracion-view-model.ts",
+      "originalSha256": "361071a2cf373552e05779a08efc1e1bf04c04b5b10e69f62b1f6a6d7228356f",
+      "originalBytes": 1148,
+      "migratedSha256": "931e8b6d71e0c4ce45875ac4f31ddb3feaa401286ec07403405815a0447dc711",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "configuracion",
+      "source": "src/features/configuracion/views/configuracion-seccion-view.tsx",
+      "destination": "src/modules/configuracion/views/configuracion-seccion-view.tsx",
+      "originalSha256": "17424cb9a7ce4a99771b6714e72fd3ec9705990b2921e324db493b6865413bdc",
+      "originalBytes": 3000,
+      "migratedSha256": "3b7828c821fa8f8e5493d05c31c70904342274368a30686c5a27af324043d00c",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "configuracion",
+      "source": "src/features/configuracion/views/configuracion-view.tsx",
+      "destination": "src/modules/configuracion/views/configuracion-view.tsx",
+      "originalSha256": "a5fdc825a7d0a7dc25e79f056451282f628a88c86497b01bd6ef8a737d056e13",
+      "originalBytes": 1420,
+      "migratedSha256": "5c020d03de7decfd0a825fff30ad23644375f9720d82e7581ed3db6ed9ff4c54",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "cuenta",
+      "source": "src/features/cuenta/models/cuenta.ts",
+      "destination": "src/modules/cuenta/models/cuenta.ts",
+      "originalSha256": "a361e7dc17650ecbc06c681b43d9901b07f4b72b67a91afee52f6557685063e4",
+      "originalBytes": 3540,
+      "migratedSha256": "a361e7dc17650ecbc06c681b43d9901b07f4b72b67a91afee52f6557685063e4",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "cuenta",
+      "source": "src/features/cuenta/viewmodels/use-cuenta-view-model.ts",
+      "destination": "src/modules/cuenta/viewmodels/use-cuenta-view-model.ts",
+      "originalSha256": "ba952a50b2c47828ba0169df56e4ecb8d5306a05ce01e33da11ea99860ad89a1",
+      "originalBytes": 657,
+      "migratedSha256": "7c30bc213da48bb25bf8d301cefcf475426f2bb2c5ea6ede144f2ec603693e01",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "cuenta",
+      "source": "src/features/cuenta/views/cuenta-view.tsx",
+      "destination": "src/modules/cuenta/views/cuenta-view.tsx",
+      "originalSha256": "cf086bca16e76013b0fce76627a58addcf02552778a3cfa135b0499dc7b63e65",
+      "originalBytes": 1942,
+      "migratedSha256": "915e17aa0c3fc33e808b5cfc3d843493b82c2b213dc4a73eff15dd478e24b4d6",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "cursos",
+      "source": "src/features/cursos/models/curso.ts",
+      "destination": "src/modules/cursos/models/curso.ts",
+      "originalSha256": "a06d3d18b936ddef58c7b0fb3f8ffb2d151d9d05769561069fd3fc4159973188",
+      "originalBytes": 313,
+      "migratedSha256": "a06d3d18b936ddef58c7b0fb3f8ffb2d151d9d05769561069fd3fc4159973188",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "cursos",
+      "source": "src/features/cursos/models/cursos-preview.ts",
+      "destination": "src/modules/cursos/models/cursos-preview.ts",
+      "originalSha256": "15ff632f80c8f4cbc94fff5f2ccca6a7e6bb09b1765ef6f51284fa3672ca7819",
+      "originalBytes": 375,
+      "migratedSha256": "15ff632f80c8f4cbc94fff5f2ccca6a7e6bb09b1765ef6f51284fa3672ca7819",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "cursos",
+      "source": "src/features/cursos/models/mis-cursos.ts",
+      "destination": "src/modules/cursos/models/mis-cursos.ts",
+      "originalSha256": "559e79c5f5c4cfc3cede21ce054ca40e56ec9fd9b2d4c568ce4a47d0f73d6399",
+      "originalBytes": 165,
+      "migratedSha256": "559e79c5f5c4cfc3cede21ce054ca40e56ec9fd9b2d4c568ce4a47d0f73d6399",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "cursos",
+      "source": "src/features/cursos/viewmodels/use-cursos-view-model.ts",
+      "destination": "src/modules/cursos/viewmodels/use-cursos-view-model.ts",
+      "originalSha256": "a9bde9fee2ba6b4dab74000a7c70711d1b22dd635b40136d566582c40cd5e794",
+      "originalBytes": 989,
+      "migratedSha256": "cf01f800ea123a519f3d75ee6b603f983aa15fc161171f53ca1dc30829c776c3",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "cursos",
+      "source": "src/features/cursos/viewmodels/use-mis-cursos-view-model.ts",
+      "destination": "src/modules/cursos/viewmodels/use-mis-cursos-view-model.ts",
+      "originalSha256": "f5014288910371f28bfb490de7d2c92d8d0789f12514d11471e6ab577d832001",
+      "originalBytes": 438,
+      "migratedSha256": "40876ea5fc775940373f2c5bc8b6457a84333ab81a8c2fed683bf71701bda5ab",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "cursos",
+      "source": "src/features/cursos/views/cursos-view.tsx",
+      "destination": "src/modules/cursos/views/cursos-view.tsx",
+      "originalSha256": "23cade915b4b70c5cb6e284b2989cceb943876a3816d985daa5a7fea3bf8c33f",
+      "originalBytes": 1293,
+      "migratedSha256": "a6154b9139d5246c450b7523025954a2f6c2f3a51e76863d18b2e92cf63f4c63",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "cursos",
+      "source": "src/features/cursos/views/mis-cursos-view.tsx",
+      "destination": "src/modules/cursos/views/mis-cursos-view.tsx",
+      "originalSha256": "1b320e052173326fdebf87d031cff52b0e11b6ee0ecf7200d5c3a2aeca95c6b3",
+      "originalBytes": 619,
+      "migratedSha256": "20f90486a13392592b0dff148df368e31d33c710048c1f201b48f7b580fd35f1",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "favoritos",
+      "source": "src/features/favoritos/models/favorito.ts",
+      "destination": "src/modules/favoritos/models/favorito.ts",
+      "originalSha256": "e666702361c29a37a36f560a5e0c4b7905eb9cdd13d2d300f7ae0de7d4bc22fa",
+      "originalBytes": 612,
+      "migratedSha256": "db646fc5a7fe087c6d771b45b0889d7080e727e047e197ccbe319b7381959215",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "favoritos",
+      "source": "src/features/favoritos/viewmodels/use-favoritos-view-model.ts",
+      "destination": "src/modules/favoritos/viewmodels/use-favoritos-view-model.ts",
+      "originalSha256": "7fa26794dc99f62bd4ade25361dd722131ad2f25ed206109f7744e82f1a39cdb",
+      "originalBytes": 1211,
+      "migratedSha256": "cd338f8ef49f115a649c70e274ea0a87e1fff89a543d3ac0e8138552f217901a",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "favoritos",
+      "source": "src/features/favoritos/views/favoritos-view.tsx",
+      "destination": "src/modules/favoritos/views/favoritos-view.tsx",
+      "originalSha256": "77b6d171aa2accf0862467dfecdc73ad4fd032b10cb92842397500a5a0a19a74",
+      "originalBytes": 1044,
+      "migratedSha256": "2eccf840d563978dabc85dc4d73f8733697983c979fd80ff359e9d8b6fa02845",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "informacion",
+      "source": "src/features/informacion/models/informacion.ts",
+      "destination": "src/modules/informacion/models/informacion.ts",
+      "originalSha256": "183505ce727d6e5816a4e221ba97304005dce6e8818f7bf8b3ce87c8b1505b5a",
+      "originalBytes": 2651,
+      "migratedSha256": "183505ce727d6e5816a4e221ba97304005dce6e8818f7bf8b3ce87c8b1505b5a",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "informacion",
+      "source": "src/features/informacion/viewmodels/use-informacion-view-model.ts",
+      "destination": "src/modules/informacion/viewmodels/use-informacion-view-model.ts",
+      "originalSha256": "10b07c77cd2d7a5033e8c67477d9e59f4f0e536325a962afb1bd8d2aeb5361b6",
+      "originalBytes": 836,
+      "migratedSha256": "fd3d3778136bb5511de336a8092dc77c7f082e857aee714d81df387344ba1a32",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "informacion",
+      "source": "src/features/informacion/viewmodels/use-no-encontrado-view-model.ts",
+      "destination": "src/modules/informacion/viewmodels/use-no-encontrado-view-model.ts",
+      "originalSha256": "c995fd1f6449b3828df5c6f014fac01c09e4e279058ff6218d983a2210f36740",
+      "originalBytes": 403,
+      "migratedSha256": "258665cc49ead4617b7cd5f7372003c64573e3920de4b044c714933b751feab6",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "informacion",
+      "source": "src/features/informacion/views/informacion-view.tsx",
+      "destination": "src/modules/informacion/views/informacion-view.tsx",
+      "originalSha256": "060045759418676c238dd6781e2e6a746f5f8c29b26f673ad15084c455504178",
+      "originalBytes": 4979,
+      "migratedSha256": "a473d78d0db302e4ccb5b90fb9a89047c0753f5d3fcc5d954453c2ab0472b974",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "informacion",
+      "source": "src/features/informacion/views/no-encontrado-view.tsx",
+      "destination": "src/modules/informacion/views/no-encontrado-view.tsx",
+      "originalSha256": "58a0d7a154875624bcd1c00865afef888a998d846661e4d68e40cc18b95db2cf",
+      "originalBytes": 549,
+      "migratedSha256": "85ef814fb34e01323f2b9e6f8f064e8ba53e794ac7ae227ccef58936d1feff58",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "inicio",
+      "source": "src/features/inicio/models/inicio.ts",
+      "destination": "src/modules/inicio/models/inicio.ts",
+      "originalSha256": "50e2d5d173bb63f1baea49d696f74b0d08516fb7ac4a0be637999791b6892203",
+      "originalBytes": 1022,
+      "migratedSha256": "50e2d5d173bb63f1baea49d696f74b0d08516fb7ac4a0be637999791b6892203",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "inicio",
+      "source": "src/features/inicio/viewmodels/use-inicio-view-model.ts",
+      "destination": "src/modules/inicio/viewmodels/use-inicio-view-model.ts",
+      "originalSha256": "eb065351253634bd13dcee04bd626a896031474175874219100d5dcb78ec5201",
+      "originalBytes": 769,
+      "migratedSha256": "31433dee33a9ceb0392668dc3b166368e3b3035d4530a9ca0dc40dc49910e311",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "inicio",
+      "source": "src/features/inicio/views/inicio-view.tsx",
+      "destination": "src/modules/inicio/views/inicio-view.tsx",
+      "originalSha256": "496dfd7f8139a3d1dd0f0bc8f09aedb61ef1f2ec347e8199ba57b5ddd1bddaf8",
+      "originalBytes": 3576,
+      "migratedSha256": "ef6bec1a39bb33aae16e4b3e030138b00fcc1684e09f0aa3acde132ede7ef205",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "notificaciones",
+      "source": "src/features/notificaciones/models/notificacion.ts",
+      "destination": "src/modules/notificaciones/models/notificacion.ts",
+      "originalSha256": "c0900de0f9ab9b4f831aa687a2084894856440cb4a0935da3b4dcec620c06bf5",
+      "originalBytes": 467,
+      "migratedSha256": "c0900de0f9ab9b4f831aa687a2084894856440cb4a0935da3b4dcec620c06bf5",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "notificaciones",
+      "source": "src/features/notificaciones/viewmodels/use-notificaciones-view-model.ts",
+      "destination": "src/modules/notificaciones/viewmodels/use-notificaciones-view-model.ts",
+      "originalSha256": "6d1c56a0ea9c182adfe4247149c5a6a2bd85b01133dbced53a51ffebb26acec7",
+      "originalBytes": 432,
+      "migratedSha256": "82f645353e554905032bf0fb1e99fc343a07376f3f7b9b027f43589a65d95bd7",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "notificaciones",
+      "source": "src/features/notificaciones/views/notificaciones-view.tsx",
+      "destination": "src/modules/notificaciones/views/notificaciones-view.tsx",
+      "originalSha256": "c6bf791e3d4b7e8c5f5b8575099737bf32ddc818e39db94172dd2ffc9e8c5dc6",
+      "originalBytes": 316,
+      "migratedSha256": "e78001c06a48df41e70d490a4256def2868a158c626a19101d3cddf06c96f2b6",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "perfil",
+      "source": "src/features/perfil/models/perfil.ts",
+      "destination": "src/modules/perfil/models/perfil.ts",
+      "originalSha256": "8cd4594634df7f3a264de506fb242a6815825214647c644279a9a1bcb48225ec",
+      "originalBytes": 945,
+      "migratedSha256": "8cd4594634df7f3a264de506fb242a6815825214647c644279a9a1bcb48225ec",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "perfil",
+      "source": "src/features/perfil/viewmodels/use-editar-perfil-view-model.ts",
+      "destination": "src/modules/perfil/viewmodels/use-editar-perfil-view-model.ts",
+      "originalSha256": "74aaca3dc3a63b99bf3354b7f828bc02d2a1bddb5fdbe715466d038b1a1786b0",
+      "originalBytes": 884,
+      "migratedSha256": "b652459c5adcde45e6f01567b6e5bfb20a5b3663efe91fd67aeb61ef8164df21",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "perfil",
+      "source": "src/features/perfil/viewmodels/use-perfil-view-model.ts",
+      "destination": "src/modules/perfil/viewmodels/use-perfil-view-model.ts",
+      "originalSha256": "9966e2c0bad46cd9a241a9e78f278211e77d0a33c974c49df7c45ea5cb3cc061",
+      "originalBytes": 412,
+      "migratedSha256": "5030a340b92f2a7bf0a60f04995f711de759450ab5587c5ee607ae94cbc2ee24",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "perfil",
+      "source": "src/features/perfil/views/editar-perfil-view.tsx",
+      "destination": "src/modules/perfil/views/editar-perfil-view.tsx",
+      "originalSha256": "e16653a3e0ace1bb396e261b7a350f680c8251161a828ef82ebf4c230062b332",
+      "originalBytes": 915,
+      "migratedSha256": "6a8ccab06ae39f228dd4845cd9b9034c8465e6afa52314a7273044bf5e3d6134",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "perfil",
+      "source": "src/features/perfil/views/perfil-view.tsx",
+      "destination": "src/modules/perfil/views/perfil-view.tsx",
+      "originalSha256": "70980ee3a616e29d1e2aa93d61cdd2809205b0222a53f280a03f6a3892a3025c",
+      "originalBytes": 2253,
+      "migratedSha256": "13942372a223cb73db6152a6d2573bbab7a159498a58111a2719c1ac6a8dba95",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "productos",
+      "source": "src/features/productos/models/producto.ts",
+      "destination": "src/modules/productos/models/producto.ts",
+      "originalSha256": "e901799986786ff83d6fe5ae5ac1041998fb590ad05b6b54aeb16e00e9eac438",
+      "originalBytes": 242,
+      "migratedSha256": "e901799986786ff83d6fe5ae5ac1041998fb590ad05b6b54aeb16e00e9eac438",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "productos",
+      "source": "src/features/productos/models/productos-preview.ts",
+      "destination": "src/modules/productos/models/productos-preview.ts",
+      "originalSha256": "5b1aa35dab66c9379ce81884e37e6bd4d4d537c664f3e47b75b4c83e83fdf255",
+      "originalBytes": 234,
+      "migratedSha256": "5b1aa35dab66c9379ce81884e37e6bd4d4d537c664f3e47b75b4c83e83fdf255",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "productos",
+      "source": "src/features/productos/viewmodels/use-productos-view-model.ts",
+      "destination": "src/modules/productos/viewmodels/use-productos-view-model.ts",
+      "originalSha256": "a4a963f8874c183b54401f5742444a315d1fbd8a88d7f3dd2acc816e99f4c9ee",
+      "originalBytes": 724,
+      "migratedSha256": "a4b58e120bb0ad4c22e14c3462388d00b59fc5a85d345f25a4f1010c6a031235",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "productos",
+      "source": "src/features/productos/views/productos-list-view.tsx",
+      "destination": "src/modules/productos/views/productos-list-view.tsx",
+      "originalSha256": "59b09a48295a4208abcb46ca395a8a01493058fe6d3ec7b866c359d0d2bb221f",
+      "originalBytes": 461,
+      "migratedSha256": "41de3575556a8e0664b2365509eb254be3030b91ce72eca5de736ff93f3cbb13",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "servicios",
+      "source": "src/features/servicios/models/servicio.ts",
+      "destination": "src/modules/servicios/models/servicio.ts",
+      "originalSha256": "cc7e80e7e337ddb5c213382c8506b8ee36eb5333ac16b99b5ec8c748c517a8db",
+      "originalBytes": 289,
+      "migratedSha256": "cc7e80e7e337ddb5c213382c8506b8ee36eb5333ac16b99b5ec8c748c517a8db",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "servicios",
+      "source": "src/features/servicios/models/servicios-preview.ts",
+      "destination": "src/modules/servicios/models/servicios-preview.ts",
+      "originalSha256": "90c57ff5b9120da78e9e30e7ebfe845385ae8d57417d4acc35f6357f3b148447",
+      "originalBytes": 823,
+      "migratedSha256": "90c57ff5b9120da78e9e30e7ebfe845385ae8d57417d4acc35f6357f3b148447",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "servicios",
+      "source": "src/features/servicios/viewmodels/use-servicios-view-model.ts",
+      "destination": "src/modules/servicios/viewmodels/use-servicios-view-model.ts",
+      "originalSha256": "21bfc14198307b97ca686a07a497cb083509b774cd75b54b611f8c811cf1b03f",
+      "originalBytes": 895,
+      "migratedSha256": "ff411ce782eca5a6dc928ae7846aaed0bbf7a0136857ac1317b3e934c53e694f",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "servicios",
+      "source": "src/features/servicios/views/servicios-view.tsx",
+      "destination": "src/modules/servicios/views/servicios-view.tsx",
+      "originalSha256": "5edb9f181420464b72d5b4354960ea9909acea97639bbd906fcb58d8816bb84f",
+      "originalBytes": 1648,
+      "migratedSha256": "75ee23f1500d538af0ac9e0dcef5eeeb814b22f737ca22389a960f8ad7329b6b",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "ventas",
+      "source": "src/features/ventas/models/venta.ts",
+      "destination": "src/modules/ventas/models/venta.ts",
+      "originalSha256": "8b7575afd8acc1e47041234f80c39b5b1b78fed835d25ef5fd99342e6d3e3869",
+      "originalBytes": 906,
+      "migratedSha256": "8b7575afd8acc1e47041234f80c39b5b1b78fed835d25ef5fd99342e6d3e3869",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "ventas",
+      "source": "src/features/ventas/viewmodels/use-carrito-view-model.ts",
+      "destination": "src/modules/ventas/viewmodels/use-carrito-view-model.ts",
+      "originalSha256": "79b8d1901d6637dba40a1524f87175584e87bc5553e151b63965852334b30acf",
+      "originalBytes": 1071,
+      "migratedSha256": "794b81af8d7183cafc47fab32e291f393943154b4386a56f6499fb5282e88ea2",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "ventas",
+      "source": "src/features/ventas/viewmodels/use-compras-view-model.ts",
+      "destination": "src/modules/ventas/viewmodels/use-compras-view-model.ts",
+      "originalSha256": "e5f89c78b219853655515130838507dc7aca597d43addc49934b9493ecfcbbb7",
+      "originalBytes": 395,
+      "migratedSha256": "c082cb7f69ddc15884ab856e5c8303930f7aba4d04d58a0d26ed12aa1cb06665",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "ventas",
+      "source": "src/features/ventas/views/carrito-view.tsx",
+      "destination": "src/modules/ventas/views/carrito-view.tsx",
+      "originalSha256": "06e4858f6108568f936bf48c2b039299849bf95e7cad1ca62b9edbd2bd3818d9",
+      "originalBytes": 2524,
+      "migratedSha256": "4ba523fcae3671f83425be05742ca4c674b7247f1cb4153dacbda7611283d5ae",
+      "importsOnlyVerified": true
+    },
+    {
+      "module": "ventas",
+      "source": "src/features/ventas/views/compras-view.tsx",
+      "destination": "src/modules/ventas/views/compras-view.tsx",
+      "originalSha256": "448d51f0e487d61d9d0e0d3bcafde4ce0c1a5a1e4505952a7de8aad3795ec723",
+      "originalBytes": 479,
+      "migratedSha256": "45dbc5c8ff0bedf9c5cb86626a8c2836373492e9e844d820ba2956b99258e1d2",
+      "importsOnlyVerified": true
+    }
+  ],
+  "presentationFiles": [
+    {
+      "path": "src/components/navigation/bottom-navigation.tsx",
+      "originalSha256": "abe55dc689806aa814c99fd968c8b30134a80ed0482f2fbd1d4e5f859fb33bea",
+      "migratedSha256": "abe55dc689806aa814c99fd968c8b30134a80ed0482f2fbd1d4e5f859fb33bea",
+      "preservation": "unchanged"
+    },
+    {
+      "path": "src/components/navigation/section-screen.tsx",
+      "originalSha256": "2ddc3a67293f0214e80f00aa0d1c6ea5e32f26c0a56f572974bdad608820ac5f",
+      "migratedSha256": "2ddc3a67293f0214e80f00aa0d1c6ea5e32f26c0a56f572974bdad608820ac5f",
+      "preservation": "unchanged"
+    },
+    {
+      "path": "src/components/themed-text.tsx",
+      "originalSha256": "be5065145628769263819f67c8d17410d2b7092d296488005106c844b1c07ea9",
+      "migratedSha256": "be5065145628769263819f67c8d17410d2b7092d296488005106c844b1c07ea9",
+      "preservation": "unchanged"
+    },
+    {
+      "path": "src/components/themed-view.tsx",
+      "originalSha256": "d056189f99956af79656ddb41072cab7b9bd24018084fae749e8c2099dd659c5",
+      "migratedSha256": "d056189f99956af79656ddb41072cab7b9bd24018084fae749e8c2099dd659c5",
+      "preservation": "unchanged"
+    },
+    {
+      "path": "src/components/ui/account-section-styles.ts",
+      "originalSha256": "5e790ca61da9cd39b27faf6d84c932ce67eadb3646bb99a1d584602153623ea6",
+      "migratedSha256": "5e790ca61da9cd39b27faf6d84c932ce67eadb3646bb99a1d584602153623ea6",
+      "preservation": "unchanged"
+    },
+    {
+      "path": "src/components/ui/button.tsx",
+      "originalSha256": "516bad1c06aeb86707bce897f719ffdb1b60b45b8509b73b5796b0af939ddc0d",
+      "migratedSha256": "516bad1c06aeb86707bce897f719ffdb1b60b45b8509b73b5796b0af939ddc0d",
+      "preservation": "unchanged"
+    },
+    {
+      "path": "src/components/ui/icon.tsx",
+      "originalSha256": "d17e536a1b84cd4235307dddb6e7ce0f174e95dab4f3139926f6761e8e87aa92",
+      "migratedSha256": "d17e536a1b84cd4235307dddb6e7ce0f174e95dab4f3139926f6761e8e87aa92",
+      "preservation": "unchanged"
+    },
+    {
+      "path": "src/components/ui/screen.tsx",
+      "originalSha256": "baa28697f62731c6843bc2389b8ad3a01b37297039d0c962a2d3679da8dc7cfa",
+      "migratedSha256": "baa28697f62731c6843bc2389b8ad3a01b37297039d0c962a2d3679da8dc7cfa",
+      "preservation": "unchanged"
+    },
+    {
+      "path": "src/components/ui/style-guide.tsx",
+      "originalSha256": "df3a051ae22d704067c4eeff7114ea82154dfa29ade56d6c7b4d8f3764220aba",
+      "migratedSha256": "df3a051ae22d704067c4eeff7114ea82154dfa29ade56d6c7b4d8f3764220aba",
+      "preservation": "unchanged"
+    },
+    {
+      "path": "src/components/ui/text-field.tsx",
+      "originalSha256": "a09fa80931c4719c2800ab0ebfbfede18fc7043a49aa20289fc3de3e3de18bae",
+      "migratedSha256": "a09fa80931c4719c2800ab0ebfbfede18fc7043a49aa20289fc3de3e3de18bae",
+      "preservation": "unchanged"
+    },
+    {
+      "path": "src/components/ui/touchable.tsx",
+      "originalSha256": "fc3c697f5be8227ea669dda074a7c23250f1b88b67dceb339e6e40609ed96626",
+      "migratedSha256": "fc3c697f5be8227ea669dda074a7c23250f1b88b67dceb339e6e40609ed96626",
+      "preservation": "unchanged"
+    },
+    {
+      "path": "src/constants/navigation.ts",
+      "originalSha256": "362f4ab438e918aed3c6762faacf1fa7ce3f09ef3ac853a5fbc36bb9444fbb81",
+      "migratedSha256": "362f4ab438e918aed3c6762faacf1fa7ce3f09ef3ac853a5fbc36bb9444fbb81",
+      "preservation": "unchanged"
+    },
+    {
+      "path": "src/constants/theme.ts",
+      "originalSha256": "3c03537ab48f3f9939f61edeac26f43c12f5355ada51dd3d7174d22f4deba1d1",
+      "migratedSha256": "3c03537ab48f3f9939f61edeac26f43c12f5355ada51dd3d7174d22f4deba1d1",
+      "preservation": "unchanged"
+    },
+    {
+      "path": "src/app/_layout.tsx",
+      "originalSha256": "de90e64ba37e0911ee10f68644f9d0b0cf1bfd58fa81b3ca888828841fd08125",
+      "migratedSha256": "de90e64ba37e0911ee10f68644f9d0b0cf1bfd58fa81b3ca888828841fd08125",
+      "preservation": "unchanged"
+    },
+    {
+      "path": "src/app/+not-found.tsx",
+      "originalSha256": "875d429b821c4cf7735113b3c51e2e833e716c7ff5845a33197198487d0f6f88",
+      "migratedSha256": "56ed2be2e5d7361e6ff2a8dcfa43c6e71be1e8792a41474066ed052a6f6fe5f4",
+      "preservation": "imports-only"
+    },
+    {
+      "path": "src/app/agenda.tsx",
+      "originalSha256": "c3578150c0902f231bb35d51179152dbdc838cb4a2539a8943070e1614b1db9d",
+      "migratedSha256": "d8539041e376ac3e508941fa16f3e43f3e515f6698e858ace69227b764b04100",
+      "preservation": "imports-only"
+    },
+    {
+      "path": "src/app/autenticacion.tsx",
+      "originalSha256": "1c1b2ae5ce605906cb3eb0bae899f5aac988657e3cfa059b80ee99569fed54e8",
+      "migratedSha256": "bf97e9edce8ac660a51aa569ff09b8c98daa88f01c38f4703d187d9b6c930779",
+      "preservation": "imports-only"
+    },
+    {
+      "path": "src/app/carrito.tsx",
+      "originalSha256": "3eb0aa78803b35bbbd573d7981db1e21a0433c20f3a5ed6826db456e95d4fe11",
+      "migratedSha256": "2192a5b3f4c7b4ece36b82d2464339d3aed5657c25abf4f9fced6f5d1f3516c4",
+      "preservation": "imports-only"
+    },
+    {
+      "path": "src/app/catalogo.tsx",
+      "originalSha256": "6d9a9d002a2c22baa626ef494bd8da5f5d924c823b5aa64f876df428c5712b30",
+      "migratedSha256": "36218ed7a7d063b6e4d0372e62ed1dfee06a105350dbf4f6a86a5d18672eaff5",
+      "preservation": "imports-only"
+    },
+    {
+      "path": "src/app/configuracion.tsx",
+      "originalSha256": "40dd05cba06d2093a9113b942665e8bd0ac389b6f2515e15a2bf4edd10364793",
+      "migratedSha256": "1331051dd2296fbfd7433b56021860eef8a6172ee41b7275345b72b734909517",
+      "preservation": "imports-only"
+    },
+    {
+      "path": "src/app/cuenta/[seccion].tsx",
+      "originalSha256": "1aaf31f851ff7bb403285bfd8bb9d9929cd27dcae636d718c062a0ae4e8abf01",
+      "migratedSha256": "f3466e48951e27f93abbf670021106de48898c231f42946c6ecf8da6241188be",
+      "preservation": "imports-only"
+    },
+    {
+      "path": "src/app/cursos.tsx",
+      "originalSha256": "af5aa4dcec400e369cd49a4e50e2ad46b7aae19ab54787369527be80f507b467",
+      "migratedSha256": "8b267f27a40052853603e301a796699b0a7d1c44ee946186d0aec916362875a4",
+      "preservation": "imports-only"
+    },
+    {
+      "path": "src/app/index.tsx",
+      "originalSha256": "41ef3e311958a69de63e633955db3c0cf15ec4f7bb5ffd6df473d5c67adeba42",
+      "migratedSha256": "5a5adcd78e9e9cce3cc1bb4e8463cc1d286edf7ded1f6bc9814e242f71319ebd",
+      "preservation": "imports-only"
+    },
+    {
+      "path": "src/app/perfil.tsx",
+      "originalSha256": "a63c5ab691965f15a15e215074e1639780e15fb0235f29d0a319cb0046d5487a",
+      "migratedSha256": "3eda45978f3e9e781649ed115b25614494e77cd9b296fa42ae916f1e2eea4b33",
+      "preservation": "imports-only"
+    },
+    {
+      "path": "src/app/servicios.tsx",
+      "originalSha256": "51ffb3de032f618e9c791a9a81db7bd046d0822ef51c24efe3401ce6eccd6b4b",
+      "migratedSha256": "8aa95aa38821ebd849db4d0c87442a859de31f96efcc3eaaa642989221e7b296",
+      "preservation": "imports-only"
+    }
+  ],
+  "preservationRule": "El contenido original se preserva byte por byte, salvo el reemplazo mecanico de @/features/ por @/modules/ y src/features/ por src/modules/. Las hashes se capturaron antes del traslado.",
+  "importReferencesUpdated": [
+    "src/app/+not-found.tsx",
+    "src/app/agenda.tsx",
+    "src/app/autenticacion.tsx",
+    "src/app/carrito.tsx",
+    "src/app/catalogo.tsx",
+    "src/app/configuracion.tsx",
+    "src/app/cursos.tsx",
+    "src/app/index.tsx",
+    "src/app/perfil.tsx",
+    "src/app/servicios.tsx",
+    "src/app/cuenta/[seccion].tsx",
+    "src/modules/agenda/viewmodels/use-agenda-view-model.ts",
+    "src/modules/agenda/views/agenda-view.tsx",
+    "src/modules/autenticacion/viewmodels/use-autenticacion-view-model.ts",
+    "src/modules/autenticacion/views/autenticacion-seccion-view.tsx",
+    "src/modules/autenticacion/views/autenticacion-view.tsx",
+    "src/modules/catalogo/models/catalogo-preview.ts",
+    "src/modules/catalogo/models/catalogo.ts",
+    "src/modules/catalogo/viewmodels/use-catalogo-view-model.ts",
+    "src/modules/catalogo/views/catalogo-view.tsx",
+    "src/modules/configuracion/viewmodels/use-configuracion-view-model.ts",
+    "src/modules/configuracion/views/configuracion-seccion-view.tsx",
+    "src/modules/configuracion/views/configuracion-view.tsx",
+    "src/modules/cuenta/viewmodels/use-cuenta-view-model.ts",
+    "src/modules/cuenta/views/cuenta-view.tsx",
+    "src/modules/cursos/viewmodels/use-cursos-view-model.ts",
+    "src/modules/cursos/viewmodels/use-mis-cursos-view-model.ts",
+    "src/modules/cursos/views/cursos-view.tsx",
+    "src/modules/cursos/views/mis-cursos-view.tsx",
+    "src/modules/favoritos/models/favorito.ts",
+    "src/modules/favoritos/viewmodels/use-favoritos-view-model.ts",
+    "src/modules/favoritos/views/favoritos-view.tsx",
+    "src/modules/informacion/viewmodels/use-informacion-view-model.ts",
+    "src/modules/informacion/viewmodels/use-no-encontrado-view-model.ts",
+    "src/modules/informacion/views/informacion-view.tsx",
+    "src/modules/informacion/views/no-encontrado-view.tsx",
+    "src/modules/inicio/viewmodels/use-inicio-view-model.ts",
+    "src/modules/inicio/views/inicio-view.tsx",
+    "src/modules/notificaciones/viewmodels/use-notificaciones-view-model.ts",
+    "src/modules/notificaciones/views/notificaciones-view.tsx",
+    "src/modules/perfil/viewmodels/use-editar-perfil-view-model.ts",
+    "src/modules/perfil/viewmodels/use-perfil-view-model.ts",
+    "src/modules/perfil/views/editar-perfil-view.tsx",
+    "src/modules/perfil/views/perfil-view.tsx",
+    "src/modules/productos/viewmodels/use-productos-view-model.ts",
+    "src/modules/productos/views/productos-list-view.tsx",
+    "src/modules/servicios/viewmodels/use-servicios-view-model.ts",
+    "src/modules/servicios/views/servicios-view.tsx",
+    "src/modules/ventas/viewmodels/use-carrito-view-model.ts",
+    "src/modules/ventas/viewmodels/use-compras-view-model.ts",
+    "src/modules/ventas/views/carrito-view.tsx",
+    "src/modules/ventas/views/compras-view.tsx"
+  ],
+  "migrationVerification": {
+    "verifiedUtc": "2026-10-07T19:26:04.7961919Z",
+    "originalFilesPreserved": 58,
+    "presentationFilesPreserved": 25,
+    "state": "verified-before-adapter-implementation"
+  }
+}

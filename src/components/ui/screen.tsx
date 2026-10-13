@@ -1,27 +1,32 @@
-import { useHeaderHeight } from 'expo-router/react-navigation';
+import { usePathname, type Href } from 'expo-router';
 import type { ReactNode } from 'react';
 import { KeyboardAvoidingView, Platform, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { ThemedText } from '@/components/themed-text';
-import { Sizes, Spacing, Surfaces } from '@/constants/theme';
+import { AppHeader } from '@/components/layout/app-header';
+import { showsBottomNavigation } from '@/constants/navigation';
+import { Sizes, Spacing } from '@/theme';
+import { useTheme } from '@/hooks/use-theme';
 
 export type ScreenProps = {
-  title: string;
+  title?: string;
   subtitle?: string;
+  backHref?: Href;
+  brand?: boolean;
+  compactHeader?: boolean;
+  headerActions?: ReactNode;
   children?: ReactNode;
 };
 
-export function Screen({ title, subtitle, children }: ScreenProps) {
-  const headerHeight = useHeaderHeight();
-
+export function Screen({ title, subtitle, backHref, brand, compactHeader, headerActions, children }: ScreenProps) {
+  const hasBottomNavigation = showsBottomNavigation(usePathname());
+  const theme = useTheme();
   return (
     <SafeAreaView
-      edges={['left', 'right', 'bottom']}
-      style={[styles.screen, { backgroundColor: Surfaces.screen }]}>
+      edges={hasBottomNavigation ? ['top', 'left', 'right'] : ['top', 'left', 'right', 'bottom']}
+      style={[styles.screen, { backgroundColor: theme.background }]}>
       <KeyboardAvoidingView
         style={styles.screen}
-        keyboardVerticalOffset={headerHeight}
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
         <ScrollView
           style={styles.screen}
@@ -29,14 +34,7 @@ export function Screen({ title, subtitle, children }: ScreenProps) {
           keyboardShouldPersistTaps="handled"
           keyboardDismissMode="on-drag">
           <View style={styles.content}>
-            <View style={styles.heading}>
-              <ThemedText type="title" accessibilityRole="header">
-                {title}
-              </ThemedText>
-              {subtitle ? (
-                <ThemedText themeColor="textSecondary">{subtitle}</ThemedText>
-              ) : null}
-            </View>
+            <AppHeader title={title} subtitle={subtitle} backHref={backHref} brand={brand} compact={compactHeader} actions={headerActions} />
             {children}
           </View>
         </ScrollView>
@@ -51,15 +49,13 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     flexGrow: 1,
-    padding: Spacing.four,
+    padding: Spacing.three,
+    paddingBottom: Spacing.four,
   },
   content: {
     width: '100%',
     maxWidth: Sizes.maxContentWidth,
     alignSelf: 'center',
     gap: Spacing.four,
-  },
-  heading: {
-    gap: Spacing.two,
   },
 });

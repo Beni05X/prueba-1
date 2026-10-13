@@ -2,13 +2,16 @@ import '@/global.css';
 
 export const Colors = {
   primary: '#ED4087',
-  text: '#000000',
-  textSecondary: '#60646C',
-  background: '#ffffff',
-  backgroundElement: '#F0F0F3',
-  backgroundSelected: '#E0E1E6',
+  primarySoft: '#FFE8F2',
+  text: '#1F1419',
+  textSecondary: '#7B7479',
+  background: '#FCFAFC',
+  backgroundElement: '#FFFFFF',
+  backgroundSelected: '#F3EDF1',
   onPrimary: '#ffffff',
-  border: '#E0E1E6',
+  border: '#E9E4E7',
+  inactive: '#8E888D',
+  success: '#329D6A',
 } as const;
 
 export type ThemeColor = keyof typeof Colors;
@@ -34,12 +37,18 @@ export const Radius = {
 } as const;
 
 export const Sizes = {
-  text: { title: 28, subtitle: 20, body: 16, small: 14, code: 12 },
-  lineHeight: { title: 36, subtitle: 28, body: 24, small: 20, code: 18 },
+  text: { title: 24, subtitle: 18, body: 14, small: 12, code: 11, tab: 10 },
+  lineHeight: { title: 32, subtitle: 26, body: 22, small: 18, code: 16, tab: 16 },
   controlMinHeight: 48,
   touchMinWidth: 44,
   borderWidth: 1,
-  maxContentWidth: 800,
+  maxContentWidth: 600,
+  mediaHero: 180,
+  mediaThumbnail: 72,
+  mediaCardHeight: 88,
+  categoryMinHeight: 88,
+  avatar: 56,
+  tabBarMinHeight: 64,
 } as const;
 
 // Use small icons inline, medium icons in controls, and large icons for emphasis.
@@ -69,6 +78,8 @@ export const Typography = {
   smallBold: { ...boldText, fontSize: Sizes.text.small, lineHeight: Sizes.lineHeight.small },
   label: { ...boldText, fontSize: Sizes.text.small, lineHeight: Sizes.lineHeight.small },
   action: { ...boldText, fontSize: Sizes.text.body, lineHeight: Sizes.lineHeight.body },
+  auxiliary: { ...regularText, fontSize: Sizes.text.code, lineHeight: Sizes.lineHeight.code },
+  tab: { ...boldText, fontSize: Sizes.text.tab, lineHeight: Sizes.lineHeight.tab },
   link: { ...boldText, fontSize: Sizes.text.small, lineHeight: Sizes.lineHeight.body },
   code: { ...regularText, fontSize: Sizes.text.code, lineHeight: Sizes.lineHeight.code },
 } as const;
@@ -86,7 +97,7 @@ export const NavigationFonts = {
 export const Surfaces = {
   screen: Colors.background,
   card: Colors.backgroundElement,
-  control: Colors.background,
+  control: Colors.backgroundElement,
 } as const;
 
 export const ControlStates = {
